@@ -31,3 +31,5 @@ Cannot change brightness? or brightness control not working?<br>Take a look at b
 3. https://stackoverflow.com/questions/14508727/how-to-get-value-out-from-the-tkinter-slider-scale 
 4. https://docs.python.org/3/library/subprocess.html#subprocess.run
 5. https://itsfoss.com/fix-brightness-ubuntu-1310/
+
+By: HackerAssociation
