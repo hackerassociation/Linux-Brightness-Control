@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+#print("Hello, world")
+import tkinter as tk
+import subprocess
+
+def show_values(value):
+	print (value)
+	subprocess.call(["xbacklight","-set",value])
+
+class Display:
+
+	def __init__(self):
+
+		self.root=tk.Tk()
+		self.root.title("xbacklight")
+		blevel=subprocess.check_output(["xbacklight","-get"])
+		self.slide1=tk.Scale(self.root, from_=1, to=100, orient=tk.HORIZONTAL, command=show_values)
+		self.slide1.set(round(float(blevel.decode("utf-8").rstrip())))
+		#print (self.slide1.get())		
+		self.slide1.pack()
+		self.root.mainloop()
+
+dis =Display()
