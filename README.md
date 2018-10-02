@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+# Welcome to the Linux-Brightness-Control wiki!
+Cannot change brightness? or brightness control not working?<br>Take a look at brightness-controller version 1!<br>
+![screenshot](https://github.com/hackerassociation/Linux-Brightness-Control/blob/master/at%2078.png)
 
-You can use the [editor on GitHub](https://github.com/hackerassociation/Linux-Brightness-Control/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Prerequisites and Installation
+**1. Check if you are intel, if yes, perform below** [[7]](https://itsfoss.com/fix-brightness-ubuntu-1310/)
+* `ls /sys/class/backlight/`
+* `sudo touch /usr/share/X11/xorg.conf.d/20-intel.conf`
+* `sudo gedit /usr/share/X11/xorg.conf.d/20-intel.conf`
+>       Section Device
+>       Identifier  "card0"
+>       Driver      "intel"
+>       Option      "Backlight"  "intel_backlight"
+>       BusID       "PCI:0:2:0"
+>       EndSection`
+* `sudo reboot`<br >
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+**2. Download the python script "Brightness"** [[2-4]](https://www.youtube.com/watch?v=JadLzxetiqY)<br >
+**3. Run the following commands in the command prompt** 
+* `sudo apt-get install xbacklight` 
+* `sudo apt-get install python3-tk` 
+* `chmod +x brightness-control`
 
-### Markdown
+**4. Change the settings of nautilus to ask each time on executable** [[1]](https://askubuntu.com/questions/761365/how-to-run-a-python-program-directly)<br >
+**5. Double click on the "brightness-control" python program to control brightness!**
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hackerassociation/Linux-Brightness-Control/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### References
+1. https://askubuntu.com/questions/761365/how-to-run-a-python-program-directly
+2. https://www.youtube.com/watch?v=JadLzxetiqY
+3. https://stackoverflow.com/questions/14508727/how-to-get-value-out-from-the-tkinter-slider-scale 
+4. https://docs.python.org/3/library/subprocess.html#subprocess.run
+5. https://itsfoss.com/fix-brightness-ubuntu-1310/
