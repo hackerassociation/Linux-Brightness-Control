@@ -1,4 +1,5 @@
-# Welcome to the Linux-Brightness-Control wiki!
+{% seo %}
+# Welcome to the Linux-Brightness-Control Page!
 Cannot change brightness? or brightness control not working?<br>Take a look at brightness-controller version 1!<br>
 ![screenshot](https://github.com/hackerassociation/Linux-Brightness-Control/blob/master/at%2078.png)
 
